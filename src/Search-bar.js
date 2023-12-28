@@ -1,3 +1,5 @@
+import React from "react";
+
 function SearchBar({
     filterText,
     inStockOnly,
@@ -20,4 +22,4 @@ function SearchBar({
         </label>
       </form>
     );
-  }
+  }export default SearchBar;

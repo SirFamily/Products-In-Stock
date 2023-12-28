@@ -1,4 +1,6 @@
 import React from "react";
+import ProductCategoryRow from './Product-category-row';
+import ProductRow from './Product-row';
 function ProductTable({ products, filterText, inStockOnly }) {
     const rows = [];
     let lastCategory = null;

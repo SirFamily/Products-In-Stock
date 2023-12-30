@@ -10,15 +10,17 @@ function SearchBar({
       <form>
         <input 
           type="text" 
+          className="Search"
           value={filterText} placeholder="Search..." 
           onChange={(e) => onFilterTextChange(e.target.value)} />
         <label>
           <input 
             type="checkbox" 
+            className="check"
             checked={inStockOnly} 
             onChange={(e) => onInStockOnlyChange(e.target.checked)} />
           {' '}
-          Only show products in stock
+
         </label>
       </form>
     );

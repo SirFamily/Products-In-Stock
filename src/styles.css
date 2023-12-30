@@ -30,6 +30,7 @@ body::-webkit-scrollbar {
   /* text-shadow: 2px 2px 5px #252d13,
   -2px -2px 5px #95b34d; */
   cursor: default;
+  transition: ease 0.7s;
 }
 
 .desc {
@@ -43,6 +44,8 @@ body::-webkit-scrollbar {
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 20px;
   cursor: default;
+  transition: ease 0.7s;
+
 }
 
 /* .logo{

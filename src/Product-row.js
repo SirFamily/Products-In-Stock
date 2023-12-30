@@ -8,6 +8,7 @@ function ProductRow({ product }) {
   
     return (
       <tr>
+        <td><img className="icon" src={product.img} alt={product.name}></img></td>
         <td>{name}</td>
         <td>{product.price}</td>
       </tr>

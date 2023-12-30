@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 0%;
   margin: 0%;
-
 }
 
 body {
@@ -30,6 +29,7 @@ body::-webkit-scrollbar {
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /* text-shadow: 2px 2px 5px #252d13,
   -2px -2px 5px #95b34d; */
+  cursor: default;
 }
 
 .desc {
@@ -42,6 +42,7 @@ body::-webkit-scrollbar {
   -2px -2px 5px #95b34d; */
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 /* .logo{
@@ -71,8 +72,26 @@ form {
   border-radius: 25px;
   width: 100%;
   padding: 13px 22px;
-
+transition: ease 0.7s;
   box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+font-weight: bold;
+color: #404d21;
+}
+
+.search:hover{
+  animation: blink 2s ease 0s 1 normal forwards;
+}
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+		background-color: #ffffff;
+	}
+
+	25%,
+	75% {
+		background-color: #edffc0;
+	}
 }
 
 input[type="text"] {
@@ -85,6 +104,12 @@ input[type="text"] {
 
 }
 
+input[type="text"]:focus{
+  outline: none;
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px #54652b;
+
+}
+
 input[type="checkbox"] {
   appearance: none;
   border: none;
@@ -94,11 +119,14 @@ input[type="checkbox"] {
   border-radius: 50%;
   border: white solid 1px;
   cursor: pointer;
+  transition: ease 0.7s;
+
 }
 
 input[type="checkbox"]:checked {
   background-color: #54652b;
   border: #404d21 solid 1px;
+  transition: ease 0.5ms;
 }
 
 /* กำหนดรูปแบบให้กับ checkbox ที่ไม่กด */
@@ -115,8 +143,17 @@ input[type="checkbox"]:checked {
   padding: 8px;
   content: url(./img/crossed-eye.png);
   border: #404d21 solid 1px;
-
+  transition: ease 0.7s;
   background-image: linear-gradient(145deg, #54652b, #647833);
+  box-shadow: 3px 3px 7px #4f5f29, -3px -3px 7px #6b8137;
+}
+
+input[type="checkbox"]:checked:hover{
+  box-shadow: 3px 3px 7px #d0d0d0,
+    -3px -3px 7px #ffffff;
+}
+
+input[type="checkbox"]:hover{
   box-shadow: 3px 3px 7px #4f5f29, -3px -3px 7px #6b8137;
 }
 
@@ -136,6 +173,7 @@ input[type="checkbox"]:checked {
 }
 
 table{
+  cursor: default;
   width: 100%;
   background-color: white;
   padding: 14px;
@@ -145,18 +183,24 @@ table{
   box-shadow: 3px 3px 7px #d0d0d0,
   -3px -3px 7px #ffffff;
     font-size: 24px;
-}
-
-.green{
-  color: #000;
+  
 }
 
 th{
-  background-color: #f3ffd7;
-color: #333d1a;
+  background-color: #5d7030;
+color: #edffc0;
 border-radius: 25px;
+font-weight: 900;
+}
+tr{
+  border-bottom: solid 1.78px  #5d7030;
+  transition: ease 0.7s;
 }
 td{
-  border-bottom: solid 1.78px #4f5f29;
-  
+  border-radius: 25px;
+}
+
+tr:hover{
+  background-color: #8ea35d;
+  color: #404d21;
 }

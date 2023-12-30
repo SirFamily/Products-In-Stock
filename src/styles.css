@@ -204,3 +204,16 @@ tr:hover{
   background-color: #8ea35d;
   color: #404d21;
 }
+
+@media (max-width: 902px) {
+  * {
+    font-size: 16px;
+  }
+  #root{
+    width: 60%;
+  }
+  .icon{
+    width: 24px;
+    height: 24px;
+  }
+}

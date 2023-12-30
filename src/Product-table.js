@@ -34,8 +34,8 @@ function ProductTable({ products, filterText, inStockOnly }) {
     return (
       <table>
         <thead>
-          <tr>
-            <th>Name</th>
+          <tr className="green">
+            <th colSpan="2">Name</th>
             <th>Price</th>
           </tr>
         </thead>

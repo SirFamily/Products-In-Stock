@@ -14,6 +14,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+  animation: gradient-scroll 46s linear infinite;
 }
 body::-webkit-scrollbar {
   width: 0em;
@@ -62,6 +63,7 @@ form {
   align-items: flex-start;
   width: 100%;
   gap: 21px;
+  margin: 21px 0;
 }
 
 .search {
@@ -90,15 +92,19 @@ input[type="checkbox"] {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: white solid 1px;
   cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
   background-color: #54652b;
+  border: #404d21 solid 1px;
 }
 
 /* กำหนดรูปแบบให้กับ checkbox ที่ไม่กด */
 input[type="checkbox"]:not(:checked) {
+  padding: 8px;
+  content: url(./img/eye.png);
   background: linear-gradient(145deg, #ffffff, #dddddd);
   box-shadow: 3px 3px 7px #d0d0d0,
     -3px -3px 7px #ffffff;
@@ -106,13 +112,17 @@ input[type="checkbox"]:not(:checked) {
 
 /* กำหนดรูปแบบให้กับ checkbox ที่กด */
 input[type="checkbox"]:checked {
+  padding: 8px;
+  content: url(./img/crossed-eye.png);
+  border: #404d21 solid 1px;
+
   background-image: linear-gradient(145deg, #54652b, #647833);
   box-shadow: 3px 3px 7px #4f5f29, -3px -3px 7px #6b8137;
 }
 
 .icon{
-  width: 14px;
-  height: 14px;
+  width: 45px;
+  height: 45px;
 }
 
 @keyframes gradient-scroll {
@@ -125,6 +135,28 @@ input[type="checkbox"]:checked {
   }
 }
 
-body {
-  animation: gradient-scroll 46s linear infinite;
+table{
+  width: 100%;
+  background-color: white;
+  padding: 14px;
+  border-radius: 25px;
+  border: white solid 1px;
+  color: #5d7030;
+  box-shadow: 3px 3px 7px #d0d0d0,
+  -3px -3px 7px #ffffff;
+    font-size: 24px;
+}
+
+.green{
+  color: #000;
+}
+
+th{
+  background-color: #f3ffd7;
+color: #333d1a;
+border-radius: 25px;
+}
+td{
+  border-bottom: solid 1.78px #4f5f29;
+  
 }

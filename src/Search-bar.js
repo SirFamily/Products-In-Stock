@@ -10,7 +10,7 @@ function SearchBar({
       <form>
         <input 
           type="text" 
-          className="Search"
+          className="search"
           value={filterText} placeholder="Search..." 
           onChange={(e) => onFilterTextChange(e.target.value)} />
         <label>

@@ -1,24 +1,111 @@
-
 * {
   box-sizing: border-box;
   padding: 0%;
   margin: 0%;
-  
+
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #78994C;
+  text-align: center;
+  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.20) 17.31%, rgba(0, 0, 0, 0.00) 88.5%), url(./img/bg2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+body::-webkit-scrollbar {
+  width: 0em;
 }
 
-.title-name{
-  color: #78994C;
-font-size: 64px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
 
+.title-name {
+  color: #5d7030;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* text-shadow: 2px 2px 5px #252d13,
+  -2px -2px 5px #95b34d; */
+}
+
+.desc {
+  color: #5d7030;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  /* text-shadow: 2px 2px 5px #252d13,
+  -2px -2px 5px #95b34d; */
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 20px;
+}
+
+/* .logo{
+  background-image: url(./img/logo.png);
+  background-repeat: no-repeat;
+  border-radius: 25px;
+width: 100px;
+height: 100px;
+} */
+
+#root {
+  padding-top: 30px;
+  height: 120vh;
+  width: 45%;
+}
+
+form {
+  display: inline-flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 21px;
+}
+
+.search {
+  border: none;
+  border-radius: 25px;
+  width: 100%;
+  padding: 13px 22px;
+
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+input[type="text"] {
+  background-image: url(./img/image\ 1.png);
+  background-position: left 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 40px;
+  background-color: rgb(255, 255, 255);
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #54652b;
+}
+
+/* กำหนดรูปแบบให้กับ checkbox ที่ไม่กด */
+input[type="checkbox"]:not(:checked) {
+  background: linear-gradient(145deg, #ffffff, #dddddd);
+  box-shadow: 3px 3px 7px #d0d0d0,
+    -3px -3px 7px #ffffff;
+}
+
+/* กำหนดรูปแบบให้กับ checkbox ที่กด */
+input[type="checkbox"]:checked {
+  background-image: linear-gradient(145deg, #54652b, #647833);
+  box-shadow: 3px 3px 7px #4f5f29, -3px -3px 7px #6b8137;
 }

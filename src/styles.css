@@ -48,6 +48,17 @@ body::-webkit-scrollbar {
 
 }
 
+.desc:hover{
+  color: #84b800;
+  text-shadow: rgb(255, 255, 255) 1px 2px 2px;
+
+}
+
+.title-name:hover{
+  text-shadow: rgb(255, 255, 255) 1px 2px 2px;
+
+}
+
 /* .logo{
   background-image: url(./img/logo.png);
   background-repeat: no-repeat;
@@ -152,7 +163,7 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked:hover{
-  box-shadow: 3px 3px 7px #d0d0d0,
+  box-shadow: 3px 3px 7px #ffffff,
     -3px -3px 7px #ffffff;
 }
 

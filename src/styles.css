@@ -9,12 +9,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.20) 17.31%, rgba(0, 0, 0, 0.00) 88.5%), url(./img/bg2.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 17.31%, rgba(0, 0, 0, 0.00) 88.5%), url(./img/bg2.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   animation: gradient-scroll 46s linear infinite;
 }
+
 body::-webkit-scrollbar {
   width: 0em;
 }
@@ -48,13 +49,13 @@ body::-webkit-scrollbar {
 
 }
 
-.desc:hover{
+.desc:hover {
   color: #84b800;
   text-shadow: rgb(255, 255, 255) 1px 2px 2px;
 
 }
 
-.title-name:hover{
+.title-name:hover {
   text-shadow: rgb(255, 255, 255) 1px 2px 2px;
 
 }
@@ -87,26 +88,28 @@ form {
   border-radius: 25px;
   width: 100%;
   padding: 13px 22px;
-transition: ease 0.7s;
+  transition: ease 0.7s;
   box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px rgba(94, 104, 121, 0.3);
-font-weight: bold;
-color: #404d21;
+  font-weight: bold;
+  color: #404d21;
 }
 
-.search:hover{
+.search:hover {
   animation: blink 2s ease 0s 1 normal forwards;
 }
-@keyframes blink {
-	0%,
-	50%,
-	100% {
-		background-color: #ffffff;
-	}
 
-	25%,
-	75% {
-		background-color: #edffc0;
-	}
+@keyframes blink {
+
+  0%,
+  50%,
+  100% {
+    background-color: #ffffff;
+  }
+
+  25%,
+  75% {
+    background-color: #edffc0;
+  }
 }
 
 input[type="text"] {
@@ -119,7 +122,7 @@ input[type="text"] {
 
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus {
   outline: none;
   box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45), inset 5px 5px 9px #54652b;
 
@@ -144,7 +147,6 @@ input[type="checkbox"]:checked {
   transition: ease 0.5ms;
 }
 
-/* กำหนดรูปแบบให้กับ checkbox ที่ไม่กด */
 input[type="checkbox"]:not(:checked) {
   padding: 8px;
   content: url(./img/eye.png);
@@ -153,7 +155,6 @@ input[type="checkbox"]:not(:checked) {
     -3px -3px 7px #ffffff;
 }
 
-/* กำหนดรูปแบบให้กับ checkbox ที่กด */
 input[type="checkbox"]:checked {
   padding: 8px;
   content: url(./img/crossed-eye.png);
@@ -163,16 +164,16 @@ input[type="checkbox"]:checked {
   box-shadow: 3px 3px 7px #4f5f29, -3px -3px 7px #6b8137;
 }
 
-input[type="checkbox"]:checked:hover{
+input[type="checkbox"]:checked:hover {
   box-shadow: 3px 3px 7px #ffffff,
     -3px -3px 7px #ffffff;
 }
 
-input[type="checkbox"]:hover{
+input[type="checkbox"]:hover {
   box-shadow: 3px 3px 7px #4f5f29, -3px -3px 7px #6b8137;
 }
 
-.icon{
+.icon {
   width: 45px;
   height: 45px;
 }
@@ -187,7 +188,7 @@ input[type="checkbox"]:hover{
   }
 }
 
-table{
+table {
   cursor: default;
   width: 100%;
   background-color: white;
@@ -196,26 +197,28 @@ table{
   border: white solid 1px;
   color: #5d7030;
   box-shadow: 3px 3px 7px #d0d0d0,
-  -3px -3px 7px #ffffff;
-    font-size: 24px;
-  
+    -3px -3px 7px #ffffff;
+  font-size: 24px;
+
 }
 
-th{
+th {
   background-color: #5d7030;
-color: #edffc0;
-border-radius: 25px;
-font-weight: 900;
+  color: #edffc0;
+  border-radius: 25px;
+  font-weight: 900;
 }
-tr{
-  border-bottom: solid 1.78px  #5d7030;
+
+tr {
+  border-bottom: solid 1.78px #5d7030;
   transition: ease 0.7s;
 }
-td{
+
+td {
   border-radius: 25px;
 }
 
-tr:hover{
+tr:hover {
   background-color: #8ea35d;
   color: #404d21;
 }
@@ -224,10 +227,12 @@ tr:hover{
   * {
     font-size: 16px;
   }
-  #root{
+
+  #root {
     width: 60%;
   }
-  .icon{
+
+  .icon {
     width: 24px;
     height: 24px;
   }

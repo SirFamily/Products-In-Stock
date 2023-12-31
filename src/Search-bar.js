@@ -1,27 +1,27 @@
 import React from "react";
 
 function SearchBar({
-    filterText,
-    inStockOnly,
-    onFilterTextChange,
-    onInStockOnlyChange
-  }) {
-    return (
-      <form>
-        <input 
-          type="text" 
-          className="search"
-          value={filterText} placeholder="Search..." 
-          onChange={(e) => onFilterTextChange(e.target.value)} />
-        <label>
-          <input 
-            type="checkbox" 
-            className="check"
-            checked={inStockOnly} 
-            onChange={(e) => onInStockOnlyChange(e.target.checked)} />
-          {' '}
+  filterText,
+  inStockOnly,
+  onFilterTextChange,
+  onInStockOnlyChange
+}) {
+  return (
+    <form>
+      <input
+        type="text"
+        className="search"
+        value={filterText} placeholder="Search..."
+        onChange={(e) => onFilterTextChange(e.target.value)} />
+      <label>
+        <input
+          type="checkbox"
+          className="check"
+          checked={inStockOnly}
+          onChange={(e) => onInStockOnlyChange(e.target.checked)} />
+        {' '}
 
-        </label>
-      </form>
-    );
-  }export default SearchBar;
+      </label>
+    </form>
+  );
+} export default SearchBar;

@@ -1,45 +1,38 @@
 import React from "react";
 import ProductCategoryRow from './Product-category-row';
 import ProductRow from './Product-row';
+
 function ProductTable({ products, filterText, inStockOnly }) {
-    const rows = [];
-    let lastCategory = null;
-  
-    products.forEach((product) => {
-      if (
-        product.name.toLowerCase().indexOf(
-          filterText.toLowerCase()
-        ) === -1
-      ) {
-        return;
-      }
-      if (inStockOnly && !product.stocked) {
-        return;
-      }
-      if (product.category !== lastCategory) {
-        rows.push(
-          <ProductCategoryRow
-            category={product.category}
-            key={product.category} />
-        );
-      }
-      rows.push(
-        <ProductRow
-          product={product}
-          key={product.name} />
+  const productsrow = products
+    .filter((product) => {
+      const name = product.name.toLowerCase();
+      const filterTextLower = filterText.toLowerCase();
+      const isInStock = !inStockOnly || product.stocked;
+      return name.includes(filterTextLower) && isInStock;
+    })
+    .map((product, index, products) => {
+      const isNewCategory = index === 0 || product.category !== products[index - 1].category;
+      return (
+        <>
+          {isNewCategory && (
+            <ProductCategoryRow category={product.category} key={product.category} />
+          )}
+          <ProductRow product={product} key={product.name} />
+        </>
       );
-      lastCategory = product.category;
     });
-  
-    return (
-      <table>
-        <thead>
-          <tr className="green">
-            <th colSpan="2">Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
-    );
-  }export default ProductTable;
+
+  return (
+    <table>
+      <thead>
+        <tr className="green">
+          <th colSpan="2">Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>{productsrow}</tbody>
+    </table>
+  );
+}
+
+export default ProductTable;

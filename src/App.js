@@ -5,10 +5,10 @@ import Title from "./Title";
 export default function App() {
   return (
     <>
-    <Title />
-    <FilterableProductTable products={PRODUCTS} />
+      <Title />
+      <FilterableProductTable products={PRODUCTS} />
     </>
   )
-  
-  
+
+
 }

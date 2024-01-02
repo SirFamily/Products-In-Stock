@@ -177,6 +177,10 @@ input[type="checkbox"]:hover {
   width: 45px;
   height: 45px;
 }
+.icon-1 {
+  width: 16px;
+  height: 16px;
+}
 
 @keyframes gradient-scroll {
   0% {

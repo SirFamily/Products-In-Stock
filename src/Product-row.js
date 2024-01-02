@@ -3,7 +3,7 @@ import React from "react";
 function ProductRow({ product }) {
   const name = product.stocked ? product.name :
     <span style={{ color: 'red' }}>
-      {product.name}
+      {product.name} <img className="icon-1" src="https://cdn-icons-png.flaticon.com/512/9850/9850163.png"/>
     </span>;
 
   return (
